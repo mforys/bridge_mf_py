@@ -12,7 +12,7 @@ class Card:
         self.rep = self.transfer_int_2_rep()
 
     def transfer_int_2_rep(self):
-        color_i = self.id / 13
+        color_i = int(self.id / 13)
         card_i = self.id % 13
         card_color = color[color_i]
         card_value = card[card_i]

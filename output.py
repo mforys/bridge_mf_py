@@ -40,12 +40,12 @@ def print_cards_values_by_color(deal, position, color):
 
 
 def print_cards_count_in_color_by_player(deal, position):
-    print "\nPlayer = %s\n----------" % position
-    print "S = %d" % hand.get_cards_color_count(deal, position, 'S')
-    print "H = %d" % hand.get_cards_color_count(deal, position, 'H')
-    print "D = %d" % hand.get_cards_color_count(deal, position, 'D')
-    print "C = %d" % hand.get_cards_color_count(deal, position, 'C')
-    print "======="
+    print ("\nPlayer = %s\n----------" % position)
+    print ("S = %d" % hand.get_cards_color_count(deal, position, 'S'))
+    print ("H = %d" % hand.get_cards_color_count(deal, position, 'H'))
+    print ("D = %d" % hand.get_cards_color_count(deal, position, 'D'))
+    print ("C = %d" % hand.get_cards_color_count(deal, position, 'C'))
+    print ("=======")
 
 
 def print_cards_values_by_table(deal_i):

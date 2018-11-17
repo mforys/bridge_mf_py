@@ -23,7 +23,7 @@ def start():
     :rtype :
     """
     for i in BIDS:
-        print i
+        print(i)
 #    print get_all_bids()
 
 
