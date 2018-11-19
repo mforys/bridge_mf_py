@@ -7,15 +7,8 @@ import hand
 
 
 def print_cards_values_by_player(deal, position):
-    """
 
-
-    :rtype : object
-    :param deal:
-    :param position:
-    """
-
-    print("\nShow hand %s" % position)
+    print("\nPlayer %s - points = %d" % (position, hand.get_points(deal, position)))
 
     print_cards_values_by_color(deal, position, 'S')
     print_cards_values_by_color(deal, position, 'H')
@@ -24,14 +17,6 @@ def print_cards_values_by_player(deal, position):
 
 
 def print_cards_values_by_color(deal, position, color):
-    """
-
-
-    :rtype : object
-    :param deal:
-    :param position:
-    :param color:
-    """
 
     unsorted_cards = hand.get_cards_values_by_color(deal, position, color)
     sorted_cards = hand.sort_A_2(unsorted_cards)
@@ -49,30 +34,13 @@ def print_cards_count_in_color_by_player(deal, position):
 
 
 def print_cards_values_by_table(deal_i):
-    """
 
-
-    :rtype : object
-    :param deal_i:
-    """
     print("\nShow table\n----------------------")
 
     print_cards_values_by_player(deal_i, 'S')
     print_cards_values_by_player(deal_i, 'W')
     print_cards_values_by_player(deal_i, 'N')
     print_cards_values_by_player(deal_i, 'E')
-
-    print("\nPoints\n--------")
-    print("S = %d" % hand.get_points(deal_i, 'S'))
-    print("W = %d" % hand.get_points(deal_i, 'W'))
-    print("N = %d" % hand.get_points(deal_i, 'N'))
-    print("E = %d" % hand.get_points(deal_i, 'E'))
-
-    print("\nCount cards in color\n--------")
-    print_cards_count_in_color_by_player(deal_i, 'S')
-    print_cards_count_in_color_by_player(deal_i, 'W')
-    print_cards_count_in_color_by_player(deal_i, 'N')
-    print_cards_count_in_color_by_player(deal_i, 'E')
 
 
 def print_deal(deal_i):

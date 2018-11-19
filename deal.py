@@ -5,12 +5,5 @@ __author__ = 'm.forys'
 import permutation
 
 
-def create():
-    """
-
-
-    :return:
-    """
+def init():
     return permutation.create(52)
-
-

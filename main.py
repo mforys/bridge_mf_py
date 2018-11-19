@@ -6,8 +6,6 @@ import deal
 import bid
 import output
 
-deal_i = deal.create()
+deal_i = deal.init()
 
-output.print_deal(deal_i)
 output.print_cards_values_by_table(deal_i)
-bid.start()
