@@ -8,12 +8,7 @@ import card
 
 
 def get(deal, position):
-    """
 
-    :param deal:
-    :param position:
-    :return:
-    """
     return {
         'S': deal[:13],
         'W': deal[13:26],
@@ -23,15 +18,7 @@ def get(deal, position):
 
 
 def get_cards_values(deal, position):
-
-    """
-
-    :param deal:
-    :param position:
-    :return:
-    """
     cards = get(deal, position)
-
     values = []
     for i in range(len(cards)):
         val = card.Card(cards[i]).transfer_int_2_rep()
@@ -41,16 +28,7 @@ def get_cards_values(deal, position):
 
 
 def get_cards_values_by_color(deal, position, color):
-
-    """
-
-    :param deal:
-    :param position:
-    :param color:
-    :return:
-    """
     cards = get_cards_values(deal, position)
-
     values = []
     for c in cards:
         if c[0] == color:
@@ -60,7 +38,7 @@ def get_cards_values_by_color(deal, position, color):
 
 
 def is_between(x, y, z):
-    if x in (y, z):
+    if x in range(y, z):
         return True
     return False
 
@@ -117,16 +95,6 @@ def get_points(deal, position):
 
 
 def get_cards_color_count(deal, position, color):
-
-    """
-
-    :param deal:
-    :param position:
-    :param color:
-    :return:
-    """
-
     cards = get_cards_values_by_color(deal, position, color)
-
     return len(cards)
 
