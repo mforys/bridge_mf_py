@@ -2,7 +2,6 @@
 
 __author__ = 'm.forys'
 
-position = ('S', 'W', 'N', 'E')
 
 import card
 
