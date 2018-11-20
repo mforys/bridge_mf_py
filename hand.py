@@ -5,7 +5,6 @@ __author__ = 'm.forys'
 
 import card
 
-
 def get(deal, position):
 
     return {
